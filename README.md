@@ -1,5 +1,12 @@
-How It Works
-File Upload: When a new file is uploaded to the lbmfuncbucket, an S3 event notification is generated.
-Lambda Trigger: This event triggers the associated AWS Lambda function.
-Processing Logic: The Lambda function processes the file according to the defined business logic (e.g., resizing images or parsing text).
-Output Handling: Results from the processing can be logged, stored back in S3, or sent to another service, such as DynamoDB.
+
+# Lambda S3 Event Processor
+
+## Description
+
+The **Lambda S3 Event Processor** is a serverless application that utilizes AWS Lambda to process events triggered by file uploads to an S3 bucket. This project showcases the integration of AWS Lambda with S3, allowing for automated processing of various file types upon their creation in the bucket.
+
+## Features
+
+- **Automatic Triggers:** The Lambda function is automatically invoked when new files are uploaded to the specified S3 bucket.
+- **File Processing:** The function can handle various file types (e.g., text, images) and perform actions such as resizing images, extracting metadata, or processing text files.
+- **Infrastructure as Code:** The application is deployed using AWS CloudFormation, ensuring reproducibility and easy management of AWS resources.
